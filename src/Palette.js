@@ -18,13 +18,18 @@ export default function Palette({palette}) {
 
   return (
     <div className='Palette'>
-      <Slider 
-        defaultValue={level} 
-        min={100} 
-        max={900} 
-        step={100} 
-        onChange={changeLevel}
-      />
+      <div className='slider'>
+        <Slider 
+          defaultValue={level} 
+          trackStyle={{backgroundColor: 'grey', height: 8 }}
+          handleStyle={{ backgroundColor: 'black', borderColor: 'white', height: 18, width: 18}}
+          railStyle={{ backgroundColor: 'grey', height: 8 }}
+          min={100} 
+          max={900} 
+          step={100} 
+          onChange={changeLevel}
+        />
+      </div>
       {/* Navbar goes here */}
       <div className='Palette-colors'>{colorBoxes}</div>
       {/* footer eventually */}
